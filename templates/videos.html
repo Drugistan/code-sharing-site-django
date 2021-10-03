@@ -1,0 +1,83 @@
+{%include 'base.html' %}
+{%load static%}
+<html lang="en">
+
+<head>
+
+    <title>Dashboard - Templune</title>
+
+    <style>
+
+        .bg{
+            color: white;
+            animation: blink 1s linear infinite;
+            animation-name: example;
+            animation-duration: 4s;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        @keyframes example {
+           0%{opacity: 0;}
+           50%{opacity: .5;}
+           100%{opacity: 1;}
+        }
+
+        .set{
+
+            color: white;
+
+        }
+
+        .set:hover{
+            color: pink
+        }
+
+        .closebtn{
+            margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+        }
+
+    </style>
+</head>
+
+<body style="background-color: gray">
+    <div class="container ">
+            <h2 class="text-center mt-3 bg" style="">  Video Topics ! Click on Tutorial Links   </h2>
+            <div class="col-12 ">
+                   {% if messages %}
+                       {% for message in messages %}
+                             <div class="mt-5 text-center">
+                                 <div class="alert alert-{{message.tags}}">
+                                         {{ message }}
+                                 </div>
+                              </div>
+                           </div>
+                        {% endfor %}
+                   {% endif%}
+            </div>
+
+        {% for title in tutorials %}
+
+            <div class="text-center mt-5">
+
+
+                <a href="orderingVideo?tutorialsVideo={{title.id}}" class="set">{{title.title}}</a>
+
+
+            </div>
+
+        {%endfor%}
+
+    </div>
+
+</body>
+
+</html>
+
+
+

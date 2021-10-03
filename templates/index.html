@@ -1,0 +1,84 @@
+{%include "base.html"%}
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet"  href="{% static 'css/index.css' %}">
+
+</head>
+<body>
+
+    <div class="container">
+        <img src="{%static 'img/goku.png' %}" class="img">
+            <h1 class="text-center heading"> Dark Coding With Dark Side</h1>
+        <div>
+            <p class="para">
+                Confused on which course to take? I have got you covered. Browse courses and find out the best course for you. Its free!
+                Code With Dark Side is my attempt to teach basics and those coding techniques to people in short time which took me ages to learn.
+            </p>
+        </div>
+
+        <div class="text-center">
+
+            <a href="#" class="btn btn-outline-warning">Video Tutorials</a>
+            <a href="{%url 'contact' %}" class="btn btn-outline-info">Contact Me</a>
+            <a href="{%url 'about' %}" class="btn btn-outline-dark">About Us</a>
+
+        </div>
+
+<div class="main">
+
+        <div class="row">
+
+            <div class="card" style="width: 18rem; margin-left: 10%">
+                  <img src="{%static 'img/python.jpg' %}" class="card-img-top" style="widt0%" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" style="font-weight: bold;">Learn Free Video </h5>
+                    <p class="card-text">Get your programming career started with these free video courses. Source code is available with all the videos for your better experience</p>
+                    <a href="#" class="btn btn-primary">Watch video</a>
+                  </div>
+           </div>
+
+        <div class="card" style="width: 18rem; margin-left: 5%">
+                  <img src="{%static 'img/c++.png' %}" class="card-img-top"  alt="...">
+                 <div class="card-body">
+                  <h5 class="card-title" style="font-weight: bold;">Learn Free Video </h5>
+                  <p class="card-text">Get your programming career started with these free video courses. Source code is available with all the videos for your better experience</p>
+                  <a href="#" class="btn btn-primary">Watch video</a>
+                 </div>
+        </div>
+
+          <div class="card" style="width: 18rem; margin-left: 5%">
+                  <img src="{%static 'img/mach.jpg' %}" class="card-img-top" style="height: 53%" alt="...">
+                 <div class="card-body">
+                  <h5 class="card-title" style="font-weight: bold;">Learn Free Video </h5>
+                  <p class="card-text">Get your programming career started with these free video courses. Source code is available with all the videos for your better experience</p>
+                  <a href="#" class="btn btn-primary">Watch video</a>
+                 </div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+
+{%block content%}
+
+ <footer class="page-footer font-small  mt-2" style="background-color: gray">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/" style="color: white"> Dark Side</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+{%endblock%}
+
+</body>
+</html>
+
+

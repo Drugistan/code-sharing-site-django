@@ -1,0 +1,41 @@
+body{
+
+    background-color: gray
+}
+
+.img{
+    width: 100px;
+    margin-left: 45%;
+    margin-top: 50px;
+    border-radius: 50%
+}
+
+.heading{
+
+    font-size: 25px;
+    margin-top: 15px;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+    animation: blink 1s linear infinite;
+    animation-name: example;
+    animation-duration: 4s;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+@keyframes example {
+   0%{opacity: 0;}
+   50%{opacity: .5;}
+   100%{opacity: 1;}
+}
+
+.para{
+
+    font-style: italic;
+    font-size: 20px;
+    color :white ;
+}
+
+.main{
+    margin-top: 5%;
+}

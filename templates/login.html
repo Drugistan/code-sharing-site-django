@@ -1,0 +1,66 @@
+{%extends 'base.html' %}
+{%block body%}
+
+              {% ifequal error "Accept" %}
+              <script>
+              swal("Congratulation !", "...Login Successfull!");
+              window.location = ('{%url "home" %}')
+              </script>
+              {%endifequal%}
+
+              {% ifequal error "None" %}
+              <script>
+              alert("Login Faild ! User Name and Password Does not exits");
+              window.location = ('{%url "RegistrationView" %}')
+              </script>
+              {%endifequal%}
+
+
+
+<div class="container" style="background-color: ; margin-top: 20px; border-radius: 35px;">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Sign In</h5>
+            <form class="form-signin" method="post">
+              {%csrf_token%}
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email address" required autofocus>
+                <label for="inputEmail">Email address</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" class="form-control" name="pass" placeholder="Password" required>
+                <label for="inputPassword">Password</label>
+              </div>
+
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Remember password</label>
+              </div>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+              <hr class="my-4">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{%endblock%}
+
+
+{%block content%}
+
+       <footer class="page-footer font-small  mt-2" style="background-color: gray">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/" style="color: white"> Dark Side</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+{%endblock%}

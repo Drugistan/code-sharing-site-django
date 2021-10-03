@@ -1,0 +1,47 @@
+{%extends 'base.html' %}
+
+{%load static%}
+
+{%block body%}
+
+
+<div class="container-fluid main-container">
+    <div class="row my-4 mx-4">
+
+{%for x in playlist%}
+            <div class="col-md-6 col-lg-4 text-center">
+                <img class="rounded-circle" src="/media/{{x.image}}" width="140" height="140">
+                <h2>{{x.cat_title}}</h2>
+                <p>
+                    {{x.description_cat}}
+                </p>
+                <p>
+
+                <a href="video?tutorials={{x.id}}"><button class="btn btn-outline-info">Start Watching »</button></a>
+
+                </p>
+            </div>
+{%endfor%}
+
+</div>
+
+
+{%endblock%}
+
+{%block content%}
+
+
+    <footer class="page-footer font-small  mt-2" style="background-color: gray">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/" style="color: white"> Dark Side</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+
+
+
+{%endblock%}

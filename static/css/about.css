@@ -1,0 +1,23 @@
+.uper{
+
+    background-color: navy;
+    padding-top: 100px;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    display: flex;
+    min-height: 250px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+
+
+.para{
+
+   font-size: 25px;
+   color: gray
+
+}
